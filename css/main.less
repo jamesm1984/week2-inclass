@@ -1,0 +1,96 @@
+@poneycorn:#2980b9;
+@basefont: 26px;
+
+.roundedbutton{
+	border-radius: 10px;
+	background: @poneycorn;
+	color: white;
+}
+
+.fontstyle(@fontcolor){
+	font-family: "Brush Script MT", cursive;
+	font-size: @basefont;
+	color: @fontcolor;
+	font-weight: 300;
+	text-decoration: underline;
+	line-height: 52px;
+}
+
+.square(@size){
+	width: @size;
+	height: @size;
+}
+
+h1{
+	font-size: @basefont * 3;
+}
+
+h2{
+	font-size: @basefont * 1.5;
+}
+
+p{
+	font-size: @basefont / 2;
+}
+
+body{
+	font-size: @basefont;
+	.fontstyle(#34495e);
+}
+
+header{
+	background-color: lighten(@poneycorn, 30%);
+	width:800px;
+	nav{
+		background-color:darkBlue;
+		ul{
+			list-style-type:none;
+			margin: 0;
+			padding: 0;
+			li{
+				margin-right: 15px;
+				display:inline;
+				&:last-child{
+					margin-right:0px;
+				}
+				&:nth-child(2){
+					color: green;
+				}
+			}
+		}
+	}
+}
+
+a{
+	color:black;
+	&:hover{
+		text-decoration: none;
+	}
+}
+
+section {
+	width:800px;
+	background-color: blue;
+	article{
+		header{
+			width:400px;
+			background-color: green;
+			h2{
+				font-size: 32px;
+			}
+		}
+		p{
+			button[type="submit"]{
+				.roundedbutton;
+				padding:5px 2px;
+			}
+		}
+	}
+}
+
+footer{
+	.mysquare{
+		.square(45px);
+		background-color: @poneycorn;	
+	}
+}
